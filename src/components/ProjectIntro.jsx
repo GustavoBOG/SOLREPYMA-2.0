@@ -5,16 +5,16 @@ import { HiOutlineFlag } from 'react-icons/hi';
 
 const ProjectIntro = () => {
   return (
-    <section id="contexto" className="bg-industrial-black py-24 px-8 md:px-24 border-b border-machine-metal">
+    <section id="contexto" className="bg-brand-carbon py-24 px-8 md:px-24 border-b border-brand-metal">
       {/* HEADER SECTION */}
       <div className="mb-16">
-        <span className="text-electric-blue font-mono text-sm tracking-[0.2em] mb-4 block uppercase font-bold">
-          01. Introducción
+        <span className="text-brand-orange font-mono text-sm tracking-[0.2em] mb-4 block uppercase font-bold">
+          01. INTRODUCCION
         </span>
-        <h2 className="text-5xl md:text-6xl font-display text-white mb-8">
-          Forjando una Nueva Identidad
+        <h2 className="text-4xl md:text-5xl font-display text-white mb-6 uppercase">
+          Forjando una<br/>Nueva Identidad
         </h2>
-        <div className="w-full h-px bg-white/5"></div>
+        <div className="w-24 h-1 bg-brand-orange"></div>
       </div>
 
       {/* CONTENT GRID */}
@@ -24,12 +24,12 @@ const ProjectIntro = () => {
           <div className="space-y-8">
             <div className="flex items-center gap-4 text-white">
               <div className="flex items-center justify-center">
-                <MdFactory className="text-3xl text-electric-blue" />
+                <MdFactory className="text-3xl text-brand-steel" />
               </div>
               <h3 className="text-3xl font-bold font-display">El Cliente</h3>
             </div>
             
-            <div className="space-y-6 text-technical-text font-body text-lg leading-relaxed">
+            <div className="space-y-6 text-brand-text font-body text-lg leading-relaxed">
               <p>
                 Solrepyma es un referente consolidado en el mantenimiento industrial pesado, 
                 especializado en soldadura de alta presión e integridad estructural durante 
@@ -45,20 +45,20 @@ const ProjectIntro = () => {
           <div className="space-y-8">
             <div className="flex items-center gap-4 text-white">
               <div className="flex items-center justify-center">
-                <HiOutlineFlag className="text-3xl text-electric-blue" />
+                <HiOutlineFlag className="text-3xl text-brand-steel" />
               </div>
               <h3 className="text-3xl font-bold font-display">El Desafío</h3>
             </div>
 
-            <div className="bg-industrial-gray/40 border border-white/5 rounded-2xl p-10 space-y-10 shadow-2xl">
+            <div className="bg-brand-carbon/40 border border-white/5 rounded-2xl p-10 space-y-10 shadow-2xl">
               {/* ITEM 1 */}
               <div className="flex gap-5">
                 <div className="mt-1 shrink-0 flex items-center justify-center">
-                   <FaCheckCircle className="text-xl text-electric-blue" />
+                    <FaCheckCircle className="text-xl text-brand-steel" />
                 </div>
                 <div>
                   <h4 className="text-white font-bold text-xl mb-2 font-display">Modernizar el Legado</h4>
-                  <p className="text-technical-text text-base leading-relaxed font-body">
+                  <p className="text-brand-text text-base leading-relaxed font-body">
                     Actualizar una marca con 30 años de historia para atraer a socios 
                     corporativos contemporáneos.
                   </p>
@@ -68,11 +68,11 @@ const ProjectIntro = () => {
               {/* ITEM 2 */}
               <div className="flex gap-5">
                 <div className="mt-1 shrink-0 flex items-center justify-center">
-                   <FaCheckCircle className="text-xl text-electric-blue" />
+                   <FaCheckCircle className="text-xl text-brand-steel" />
                 </div>
                 <div>
                   <h4 className="text-white font-bold text-xl mb-2 font-display">Preservar la Esencia</h4>
-                  <p className="text-technical-text text-base leading-relaxed font-body">
+                  <p className="text-brand-text text-base leading-relaxed font-body">
                     Evolucionar sin perder la robustez industrial que genera confianza.
                   </p>
                 </div>
@@ -81,11 +81,11 @@ const ProjectIntro = () => {
               {/* ITEM 3 */}
               <div className="flex gap-5">
                 <div className="mt-1 shrink-0 flex items-center justify-center">
-                   <FaCheckCircle className="text-xl text-electric-blue" />
+                   <FaCheckCircle className="text-xl text-brand-steel" />
                 </div>
                 <div>
                   <h4 className="text-white font-bold text-xl mb-2 font-display">Optimización Técnica</h4>
-                  <p className="text-technical-text text-base leading-relaxed font-body">
+                  <p className="text-brand-text text-base leading-relaxed font-body">
                     Diseño y estandarización de documentos críticos (facturas, albaranes y presupuestos) para proyectar precisión administrativa y coherencia visual en cada punto de contacto con el cliente.
                   </p>
                 </div>

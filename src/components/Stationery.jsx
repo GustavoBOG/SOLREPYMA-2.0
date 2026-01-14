@@ -8,9 +8,9 @@ const Stationery = () => {
         <div className="bg-white p-8 relative shadow-2xl skew-x-1 hover:skew-x-0 transition-transform duration-500 min-h-[400px]">
             {/* Header */}
             <div className="flex justify-between items-start mb-12">
-                <div className="bg-industrial-black text-white px-4 py-2 font-display uppercase tracking-widest text-sm">Solrepyma</div>
+                <div className="bg-brand-carbon text-white px-4 py-2 font-display uppercase tracking-widest text-sm">Solrepyma</div>
                 <div className="text-right">
-                    <h3 className="font-display text-2xl uppercase text-industrial-black mb-1">Factura</h3>
+                    <h3 className="font-display text-2xl uppercase text-brand-carbon mb-1">Factura</h3>
                     <p className="font-mono text-xs text-gray-500">FAC-2024-001</p>
                 </div>
             </div>
@@ -20,7 +20,7 @@ const Stationery = () => {
                 {[1, 2, 3, 4].map((i) => (
                     <div key={i} className="flex gap-4 border-b border-gray-100 pb-2">
                         <div className="w-12 h-2 bg-gray-200"></div>
-                        <div className="flex-grow h-2 bg-gray-100"></div>
+                        <div className="grow h-2 bg-gray-100"></div>
                         <div className="w-16 h-2 bg-gray-200"></div>
                     </div>
                 ))}
@@ -30,7 +30,7 @@ const Stationery = () => {
             <div className="flex justify-end pt-4 border-t-2 border-black">
                 <div className="text-right">
                      <span className="block text-[10px] font-mono uppercase text-gray-400">Importe Total</span>
-                     <span className="font-bold font-mono text-xl text-safety-orange">$12,450.00</span>
+                     <span className="font-bold font-mono text-xl text-brand-orange">$12,450.00</span>
                 </div>
             </div>
 

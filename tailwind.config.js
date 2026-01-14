@@ -7,14 +7,11 @@ export default {
   theme: {
     extend: {
       colors: {
-        'industrial-black': '#0D364E', // Azul carbón
-        'industrial-gray': '#0f415c',  
-        'machine-metal': '#27272a',    
-        'electric-blue': '#2563eb',    
-        'safety-orange': '#f97316',    
-        'warning-yellow': '#eab308',   
-        'technical-text': '#a1a1aa',   
-        'steel-blue': '#3075B6',      // Azul Acero
+        'brand-carbon': '#0D364E', // Azul carbón (Primario)
+        'brand-steel': '#3075B6',  // Azul Acero (Acento)
+        'brand-orange': '#f97316', // Naranja Seguridad (Operativo)
+        'brand-metal': '#27272a',  // Gris Maquinaria (Detalles)
+        'brand-text': '#a1a1aa',   // Gris Técnico (Texto)
       },
       fontFamily: {
         'display': ['"Roboto"', 'sans-serif'],

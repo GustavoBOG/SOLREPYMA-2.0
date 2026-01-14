@@ -56,15 +56,13 @@ const Hero = () => {
     };
 
   return (
-    <section className="relative w-full h-screen min-h-[800px] flex flex-col justify-between bg-industrial-black overflow-hidden border-b border-machine-metal">
+    <section className="relative w-full h-screen min-h-[800px] flex flex-col justify-between bg-brand-carbon overflow-hidden border-b border-brand-metal">
       
       {/* ABSTRACT GRID BACKGROUND */}
       {/* ABSTRACT GRID BACKGROUND */}
       <div className="absolute inset-0 z-0 pointer-events-none">
           {/* IMAGE BACKGROUND */}
 <div 
-  // Nota: He quitado 'mix-blend-overlay' y ajustado la opacidad.
-  // Si usas 'mix-blend-overlay', el azul cambiará de color según lo que haya debajo.
   className="absolute inset-0 bg-cover bg-center" 
   style={{ 
       backgroundImage: `
@@ -76,27 +74,24 @@ const Hero = () => {
           
           <div className="relative w-full h-full opacity-[0.03] bg-size-[40px_40px] bg-grid-pattern"></div>
           {/* Decorative heavy lines */}
-          <div className="absolute top-0 right-24 w-px h-full bg-machine-metal opacity-20"></div>
-          <div className="absolute top-0 left-24 w-px h-full bg-machine-metal opacity-20"></div>
+          <div className="absolute top-0 right-24 w-px h-full bg-brand-metal opacity-20"></div>
+          <div className="absolute top-0 left-24 w-px h-full bg-brand-metal opacity-20"></div>
       </div>
 
 
       {/* MAIN CONTENT */}
       <div className="relative z-10 px-8 md:px-24 grow flex flex-col justify-center">
         
-        <div className="mb-4 flex items-center gap-3">
-             <div className="h-px w-12 bg-safety-orange"></div>
-        </div>
 
         <div className="mb-10">
             <img src={logoNobg} alt="Solrepyma Logo" className="h-48 md:h-64 lg:h-80 w-auto" />
         </div>
 
-        <div className="max-w-2xl border-l-2 border-machine-metal pl-6 space-y-4">
+        <div className="max-w-2xl border-l-2 border-brand-metal pl-6 space-y-4">
           <h2 className="text-white text-xl md:text-2xl font-body uppercase tracking-tight">
             Elevando el mantenimiento industrial al siguiente nivel visual.
           </h2>
-          <p className="text-technical-text text-lg md:text-xl font-body leading-relaxed">
+          <p className="text-brand-text text-lg md:text-xl font-body leading-relaxed">
             Un estudio sobre identidad corporativa y estrategia de marca por Gustavo Bolivar.
           </p>
         </div>
@@ -104,7 +99,7 @@ const Hero = () => {
       </div>
 
       {/* BOTTOM BAR - NAVIGATION */}
-      <div className="relative z-10 w-full px-8 py-6 border-t border-machine-metal/30 bg-industrial-black/50 backdrop-blur-sm">
+      <div className="relative z-10 w-full px-8 py-6 border-t border-brand-metal/30 bg-brand-carbon/50 backdrop-blur-sm">
         <nav className="flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="flex items-center gap-3">
              {/* Bouncing Arrow (Left) */}
@@ -115,12 +110,10 @@ const Hero = () => {
           </div>
 
             {/* Navigation Links (Right) */}
-            <ul className="flex flex-wrap justify-center gap-6 md:gap-12 text-xs font-mono uppercase tracking-widest text-technical-text">
-                <li><button onClick={(e) => scrollToSection(e, '#contexto')} className="hover:text-white hover:text-safety-orange transition-colors cursor-pointer uppercase">Introduccion</button></li>
-                <li><button onClick={(e) => scrollToSection(e, '#concepto')} className="hover:text-white hover:text-safety-orange transition-colors cursor-pointer uppercase">ADN Visual</button></li>
-                <li><button onClick={(e) => scrollToSection(e, '#tipografia')} className="hover:text-white hover:text-safety-orange transition-colors cursor-pointer uppercase">Tipografía</button></li>
-                <li><button onClick={(e) => scrollToSection(e, '#color')} className="hover:text-white hover:text-safety-orange transition-colors cursor-pointer uppercase">Color</button></li>
-                <li><button onClick={(e) => scrollToSection(e, '#aplicaciones')} className="hover:text-white hover:text-safety-orange transition-colors cursor-pointer uppercase">Aplicaciones</button></li>
+            <ul className="flex flex-wrap justify-center gap-6 md:gap-12 text-sm font-mono uppercase tracking-widest">
+                <li><button onClick={(e) => scrollToSection(e, '#contexto')} className="nav-link cursor-pointer">01. INTRODUCCION</button></li>
+                <li><button onClick={(e) => scrollToSection(e, '#concepto')} className="nav-link cursor-pointer">02. ADN VISUAL</button></li>
+                <li><button onClick={(e) => scrollToSection(e, '#aplicaciones')} className="nav-link cursor-pointer">03.APLICACIONES</button></li>
             </ul>
         </nav>
       </div>
