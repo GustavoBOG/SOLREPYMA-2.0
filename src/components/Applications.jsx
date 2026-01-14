@@ -3,7 +3,7 @@ import Stationery from './Stationery';
 
 const Applications = () => {
     return (
-        <section className="bg-industrial-gray py-24 px-8 md:px-24 border-b border-machine-metal">
+        <section id="aplicaciones" className="bg-industrial-gray py-24 px-8 md:px-24 border-b border-machine-metal">
             <div className="mb-16">
                  <span className="text-safety-orange font-mono text-xs uppercase tracking-widest mb-4 block">04. Aplicación</span>
                  <h2 className="text-4xl lg:text-5xl font-display text-white mb-6 uppercase">Despliegue<br/>del Sistema</h2>

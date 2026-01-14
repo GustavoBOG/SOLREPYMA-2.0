@@ -7,16 +7,17 @@ export default {
   theme: {
     extend: {
       colors: {
-        'industrial-black': '#0D364E', // New Navy Blue
-        'industrial-gray': '#0f415c',  // Slightly lighter variant for cards
-        'machine-metal': '#27272a',    // Zinc 800 - Borders/Cards
-        'electric-blue': '#2563eb',    // Blue 600 - Sharp accent
-        'safety-orange': '#f97316',    // Orange 500 - Alert
-        'warning-yellow': '#eab308',   // Yellow 500 - Caution
-        'technical-text': '#a1a1aa',   // Zinc 400 - Subtitles
+        'industrial-black': '#0D364E', // Azul carbón
+        'industrial-gray': '#0f415c',  
+        'machine-metal': '#27272a',    
+        'electric-blue': '#2563eb',    
+        'safety-orange': '#f97316',    
+        'warning-yellow': '#eab308',   
+        'technical-text': '#a1a1aa',   
+        'steel-blue': '#3075B6',      // Azul Acero
       },
       fontFamily: {
-        'display': ['"Archivo Black"', 'sans-serif'],
+        'display': ['"Roboto"', 'sans-serif'],
         'body': ['"Space Grotesk"', 'sans-serif'],
       },
       backgroundImage: {

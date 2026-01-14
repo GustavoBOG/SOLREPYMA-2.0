@@ -1,52 +1,128 @@
 import React from 'react';
+import logoNobg from '../assets/logos/logoNObg.png';
 
 const Hero = () => {
+    // Custom smooth scroll function
+    const scrollToSection = (e, targetId) => {
+        // Prevent default button behavior
+        e.preventDefault();
+        
+        const target = document.querySelector(targetId);
+        if (!target) return;
+
+        // Get current positions
+        const startPosition = window.pageYOffset || window.scrollY;
+        const targetPosition = target.getBoundingClientRect().top + startPosition;
+        const distance = targetPosition - startPosition;
+        
+        // Settings
+        const duration = 2000; // 2 seconds
+        let start = null;
+
+        // Easing: easeInOutQuart for very smooth acceleration/deceleration
+        const easeInOutQuart = (t) => {
+            return t < 0.5 ? 8 * t * t * t * t : 1 - 8 * (--t) * t * t * t;
+        };
+
+        const animation = (currentTime) => {
+            if (start === null) start = currentTime;
+            const timeElapsed = currentTime - start;
+            
+            // Calculate progress (0 to 1)
+            let progress = Math.min(timeElapsed / duration, 1);
+            
+            // Apply easing
+            const ease = easeInOutQuart(progress);
+            
+            // Scroll
+            window.scrollTo({
+                top: startPosition + (distance * ease),
+                behavior: 'auto'
+            });
+
+            // Continue or finish
+            if (timeElapsed < duration) {
+                requestAnimationFrame(animation);
+            } else {
+                // Ensure we land exactly on the target
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'auto'
+                });
+            }
+        };
+
+        requestAnimationFrame(animation);
+    };
+
   return (
     <section className="relative w-full h-screen min-h-[800px] flex flex-col justify-between bg-industrial-black overflow-hidden border-b border-machine-metal">
       
       {/* ABSTRACT GRID BACKGROUND */}
+      {/* ABSTRACT GRID BACKGROUND */}
       <div className="absolute inset-0 z-0 pointer-events-none">
-          <div className="w-full h-full opacity-[0.03] bg-[length:40px_40px] bg-grid-pattern"></div>
+          {/* IMAGE BACKGROUND */}
+<div 
+  // Nota: He quitado 'mix-blend-overlay' y ajustado la opacidad.
+  // Si usas 'mix-blend-overlay', el azul cambiará de color según lo que haya debajo.
+  className="absolute inset-0 bg-cover bg-center" 
+  style={{ 
+      backgroundImage: `
+        linear-gradient(to right, #0D364E 0%, transparent 100%),
+        url('/herobg.png')
+      `
+  }}
+></div>
+          
+          <div className="relative w-full h-full opacity-[0.03] bg-size-[40px_40px] bg-grid-pattern"></div>
           {/* Decorative heavy lines */}
           <div className="absolute top-0 right-24 w-px h-full bg-machine-metal opacity-20"></div>
           <div className="absolute top-0 left-24 w-px h-full bg-machine-metal opacity-20"></div>
       </div>
 
-      {/* TOP BAR */}
-      <div className="relative z-10 w-full px-8 py-6 flex justify-between items-end border-b border-machine-metal/30">
-        
-        <div className="hidden md:flex gap-12 font-mono text-xs text-technical-text tracking-widest uppercase">
-            <span>Identidad de Marca</span>
-            <span>Diseño Digital</span>
-            <span>Sistema Industrial</span>
-        </div>
-      </div>
 
       {/* MAIN CONTENT */}
-      <div className="relative z-10 px-8 md:px-24 flex-grow flex flex-col justify-center">
+      <div className="relative z-10 px-8 md:px-24 grow flex flex-col justify-center">
         
         <div className="mb-4 flex items-center gap-3">
              <div className="h-px w-12 bg-safety-orange"></div>
         </div>
 
-        <h1 className="font-display text-6xl md:text-8xl lg:text-9xl text-white leading-[0.9] tracking-tighter uppercase mb-8">
-          Solrepyma <br/>
-        </h1>
-        <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-500 to-gray-800">SOLDADURA - REPARACIÓN Y MANTENIMIENTO INDUSTRIAL</span>
+        <div className="mb-10">
+            <img src={logoNobg} alt="Solrepyma Logo" className="h-48 md:h-64 lg:h-80 w-auto" />
+        </div>
 
-        <p className="max-w-xl text-technical-text text-lg md:text-xl font-body leading-relaxed border-l-2 border-machine-metal pl-6">
-          Forjando un nuevo lenguaje visual para soldaduras de alta presión y mantenimiento. Donde la ingeniería de precisión se encuentra con el branding moderno.
-        </p>
+        <div className="max-w-2xl border-l-2 border-machine-metal pl-6 space-y-4">
+          <h2 className="text-white text-xl md:text-2xl font-body uppercase tracking-tight">
+            Elevando el mantenimiento industrial al siguiente nivel visual.
+          </h2>
+          <p className="text-technical-text text-lg md:text-xl font-body leading-relaxed">
+            Un estudio sobre identidad corporativa y estrategia de marca por Gustavo Bolivar.
+          </p>
+        </div>
 
       </div>
 
-      {/* BOTTOM BAR */}
-      <div className="relative z-10 w-full px-8 py-6 flex justify-between items-center border-t border-machine-metal/30 bg-industrial-black/50 backdrop-blur-sm">
-         <div className="flex items-center gap-4">
-             <div className="w-3 h-3 bg-safety-orange animate-pulse rounded-full"></div>
-             <span className="text-xs font-mono uppercase text-technical-text">Estado del Sistema: En Línea</span>
-         </div>
-         <div className="text-white text-2xl animate-bounce">↓</div>
+      {/* BOTTOM BAR - NAVIGATION */}
+      <div className="relative z-10 w-full px-8 py-6 border-t border-machine-metal/30 bg-industrial-black/50 backdrop-blur-sm">
+        <nav className="flex flex-col md:flex-row justify-between items-center gap-4">
+          <div className="flex items-center gap-3">
+             {/* Bouncing Arrow (Left) */}
+            <button onClick={(e) => scrollToSection(e, '#contexto')} className='cursor-pointer '>
+              <h3 className="text-white text-xl md:text-2xl font-body uppercase tracking-tight">Explorar el proyecto</h3>
+            <div className="text-white text-2xl animate-bounce">↓</div>
+            </button>
+          </div>
+
+            {/* Navigation Links (Right) */}
+            <ul className="flex flex-wrap justify-center gap-6 md:gap-12 text-xs font-mono uppercase tracking-widest text-technical-text">
+                <li><button onClick={(e) => scrollToSection(e, '#contexto')} className="hover:text-white hover:text-safety-orange transition-colors cursor-pointer uppercase">Introduccion</button></li>
+                <li><button onClick={(e) => scrollToSection(e, '#concepto')} className="hover:text-white hover:text-safety-orange transition-colors cursor-pointer uppercase">ADN Visual</button></li>
+                <li><button onClick={(e) => scrollToSection(e, '#tipografia')} className="hover:text-white hover:text-safety-orange transition-colors cursor-pointer uppercase">Tipografía</button></li>
+                <li><button onClick={(e) => scrollToSection(e, '#color')} className="hover:text-white hover:text-safety-orange transition-colors cursor-pointer uppercase">Color</button></li>
+                <li><button onClick={(e) => scrollToSection(e, '#aplicaciones')} className="hover:text-white hover:text-safety-orange transition-colors cursor-pointer uppercase">Aplicaciones</button></li>
+            </ul>
+        </nav>
       </div>
 
     </section>

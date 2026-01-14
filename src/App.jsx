@@ -15,8 +15,6 @@ function App() {
       <Hero />
       <ProjectIntro />
       <BrandConcept />
-      <Typography />
-      <ColorPalette />
       <Applications />
       <Footer />
     </div>

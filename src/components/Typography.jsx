@@ -2,7 +2,7 @@ import React from 'react';
 
 const Typography = () => {
     return (
-        <section className="bg-industrial-black text-white py-24 px-8 border-b border-machine-metal">
+        <section id="tipografia" className="bg-industrial-black text-white py-24 px-8 border-b border-machine-metal">
             <div className="max-w-7xl mx-auto">
                 <div className="grid md:grid-cols-2 gap-16 border-t border-machine-metal pt-8">
                     

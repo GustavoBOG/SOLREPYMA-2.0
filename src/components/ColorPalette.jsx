@@ -11,17 +11,17 @@ const ColorPalette = () => {
     ];
 
   return (
-    <section className="bg-industrial-black py-24 px-8 border-b border-machine-metal">
+    <section id="color" className="bg-industrial-black py-24 px-8 border-b border-machine-metal">
         <div className="max-w-7xl mx-auto">
             <div className="mb-12 flex items-center gap-4">
-                 <div className="w-4 h-4 bg-gradient-to-r from-safety-orange to-warning-yellow rounded-full"></div>
+                 <div className="w-4 h-4 bg-linear-to-r from-safety-orange to-warning-yellow rounded-full"></div>
                  <h2 className="text-white font-mono uppercase tracking-widest text-sm">Cromática del Sistema</h2>
             </div>
             
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
                 {palette.map((color) => (
                     <div key={color.name} className="group relative">
-                        <div className={`w-full aspect-[3/4] ${color.bg} border border-machine-metal relative transition-transform duration-300 group-hover:-translate-y-2`}>
+                        <div className={`w-full aspect-3/4 ${color.bg} border border-machine-metal relative transition-transform duration-300 group-hover:-translate-y-2`}>
                             <div className="absolute bottom-0 left-0 w-full p-4 bg-black/40 backdrop-blur-sm border-t border-white/10">
                                 <span className="block text-white font-bold font-body text-sm">{color.name}</span>
                                 <span className="block text-white/70 font-mono text-[10px] mt-1">{color.hex}</span>
