@@ -1,6 +1,6 @@
 # SOLREPYMA 2.0 | Identidad Industrial
 
-![Solrepyma Identity](public/herobg.png)
+![Solrepyma Identity](public/logoNObg.png)
 
 ## 🛠️ Sobre el Proyecto
 
