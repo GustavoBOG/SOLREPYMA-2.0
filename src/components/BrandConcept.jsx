@@ -94,11 +94,11 @@ const BrandConcept = () => {
                             </div>
 
                             {/* RIGHT SIDE: VISUAL SPECIMEN */}
-                            <div className="bg-[#09090b]/40 rounded-xl p-12 flex flex-col items-center justify-center border border-white/5 relative overflow-hidden aspect-video lg:aspect-square">
-                                <div className="text-center relative z-10">
-                                    <div className="text-8xl md:text-[10rem] font-display font-bold text-white mb-2 leading-none">Aa</div>
-                                    <div className="text-5xl md:text-6xl font-display text-brand-text/40 mb-8 tracking-wider">Bb Cc</div>
-                                    <div className="font-mono text-xs text-brand-steel/30 tracking-[1em]">0123456789</div>
+                            <div className="bg-[#09090b]/40 rounded-xl p-8 md:p-12 flex flex-col items-center justify-center border border-white/5 relative overflow-hidden min-h-[320px] sm:aspect-video lg:aspect-square">
+                                <div className="text-center relative z-10 w-full">
+                                    <div className="text-6xl sm:text-7xl md:text-[8rem] lg:text-[10rem] font-display font-bold text-white mb-2 leading-none">Aa</div>
+                                    <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display text-brand-text/40 mb-6 md:mb-8 tracking-wider">Bb Cc</div>
+                                    <div className="font-mono text-[10px] sm:text-xs text-brand-steel/30 tracking-[0.3em] sm:tracking-[1em] whitespace-nowrap opacity-60">0123456789</div>
                                 </div>
                                 {/* Faded Background Grid */}
                                 <div className="absolute inset-0 opacity-[0.03] bg-grid-pattern pointer-events-none"></div>

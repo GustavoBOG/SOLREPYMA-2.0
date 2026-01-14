@@ -100,20 +100,20 @@ const Hero = () => {
 
       {/* BOTTOM BAR - NAVIGATION */}
       <div className="relative z-10 w-full px-8 py-6 border-t border-brand-metal/30 bg-brand-carbon/50 backdrop-blur-sm">
-        <nav className="flex flex-col md:flex-row justify-between items-center gap-4">
+        <nav className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 md:gap-4">
           <div className="flex items-center gap-3">
              {/* Bouncing Arrow (Left) */}
-            <button onClick={(e) => scrollToSection(e, '#contexto')} className='cursor-pointer '>
+            <button onClick={(e) => scrollToSection(e, '#contexto')} className='cursor-pointer flex flex-col items-start'>
               <h3 className="text-white text-xl md:text-2xl font-body uppercase tracking-tight">Explorar el proyecto</h3>
-            <div className="text-white text-2xl animate-bounce">↓</div>
+              <div className="text-white text-2xl animate-bounce mt-2">↓</div>
             </button>
           </div>
 
             {/* Navigation Links (Right) */}
-            <ul className="flex flex-wrap justify-center gap-6 md:gap-12 text-sm font-mono uppercase tracking-widest">
-                <li><button onClick={(e) => scrollToSection(e, '#contexto')} className="nav-link cursor-pointer">01. INTRODUCCION</button></li>
-                <li><button onClick={(e) => scrollToSection(e, '#concepto')} className="nav-link cursor-pointer">02. ADN VISUAL</button></li>
-                <li><button onClick={(e) => scrollToSection(e, '#aplicaciones')} className="nav-link cursor-pointer">03.APLICACIONES</button></li>
+            <ul className="flex flex-col md:flex-row justify-start md:justify-center gap-4 md:gap-12 text-sm font-mono uppercase tracking-widest w-full md:w-auto">
+                <li><button onClick={(e) => scrollToSection(e, '#contexto')} className="nav-link cursor-pointer block text-left">01. INTRODUCCION</button></li>
+                <li><button onClick={(e) => scrollToSection(e, '#concepto')} className="nav-link cursor-pointer block text-left">02. ADN VISUAL</button></li>
+                <li><button onClick={(e) => scrollToSection(e, '#aplicaciones')} className="nav-link cursor-pointer block text-left">03. APLICACIONES</button></li>
             </ul>
         </nav>
       </div>
